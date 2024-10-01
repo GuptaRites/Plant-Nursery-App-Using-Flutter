@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 
-class LoginPage extends StatelessWidget {
-  const LoginPage({super.key});
-
+class CreatePassword extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -14,46 +12,34 @@ class LoginPage extends StatelessWidget {
             'assets/nature_background.jpg', // Add your image in the assets folder and update this path
             fit: BoxFit.cover,
           ),
-          // Transparent overlay for the content
+          // Transparent overlay
           Container(
             color: Colors.black.withOpacity(0.3),
           ),
-          // Login form content
+          // Forget password form content
           Center(
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 30),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  // Logo or icon at the top
-                  CircleAvatar(
-                    radius: 50,
-                    backgroundColor: Colors.white.withOpacity(0.9),
-                    child: Icon(
-                      Icons.eco,
-                      size: 50,
-                      color: Colors.green,
-                    ),
-                  ),
-                  SizedBox(height: 20),
-                  
-                  // "Log in" Text
+                  // "Forget Password" Text
                   Text(
-                    "Log in",
+                    "Create a new password",
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 30,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-                  SizedBox(height: 30),
+                  SizedBox(height: 20),
                   
-                  // Input fields for Email/Phone and Password
+                  // Input fields for User ID and Email
                   TextField(
                     decoration: InputDecoration(
                       filled: true,
                       fillColor: Colors.white.withOpacity(0.9),
-                      hintText: 'Enter Number or Email',
+                      hintText: 'Cerate new Password',
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(30),
                       ),
@@ -62,11 +48,10 @@ class LoginPage extends StatelessWidget {
                   SizedBox(height: 20),
                   
                   TextField(
-                    obscureText: true,
                     decoration: InputDecoration(
                       filled: true,
                       fillColor: Colors.white.withOpacity(0.9),
-                      hintText: 'Enter Password',
+                      hintText: 'Re-Enter Password',
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(30),
                       ),
@@ -74,10 +59,10 @@ class LoginPage extends StatelessWidget {
                   ),
                   SizedBox(height: 20),
                   
-                  // Log in button
+                  // Verify button
                   ElevatedButton(
                     onPressed: () {
-                      // Implement login functionality here
+                      // Implement verify functionality here
                     },
                     style: ElevatedButton.styleFrom(
                       padding: EdgeInsets.symmetric(horizontal: 80, vertical: 15), backgroundColor: Colors.white.withOpacity(0.9),
@@ -86,28 +71,11 @@ class LoginPage extends StatelessWidget {
                       ), // button color
                     ),
                     child: Text(
-                      "Log in",
+                      "Create",
                       style: TextStyle(
                         color: Colors.black,
                         fontSize: 18,
                         fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                  ),
-                  
-                  SizedBox(height: 20),
-                  
-                  // Forgot Password link
-                  TextButton(
-                    onPressed: () {
-                      // Implement forgot password functionality here
-                    },
-                    child: Text(
-                      "Forgot password?",
-                      style: TextStyle(
-                        color: Colors.red,
-                        fontSize: 16,
-                        decoration: TextDecoration.underline,
                       ),
                     ),
                   ),

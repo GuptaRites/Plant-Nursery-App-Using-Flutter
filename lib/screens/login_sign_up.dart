@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class LoginPage extends StatelessWidget {
-  const LoginPage({super.key});
+class LoginSignUp extends StatelessWidget {
+  const LoginSignUp({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -11,7 +11,7 @@ class LoginPage extends StatelessWidget {
         children: [
           // Background image
           Image.asset(
-            'assets/nature_background.jpg', // Add your image in the assets folder and update this path
+            'assets/nature_background.jpeg', // Add your image in the assets folder and update this path
             fit: BoxFit.cover,
           ),
           // Transparent overlay for the content
@@ -39,7 +39,7 @@ class LoginPage extends StatelessWidget {
                   
                   // "Log in" Text
                   Text(
-                    "Log in",
+                    "Welcome to Plant Nursery",
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 30,
@@ -48,33 +48,7 @@ class LoginPage extends StatelessWidget {
                   ),
                   SizedBox(height: 30),
                   
-                  // Input fields for Email/Phone and Password
-                  TextField(
-                    decoration: InputDecoration(
-                      filled: true,
-                      fillColor: Colors.white.withOpacity(0.9),
-                      hintText: 'Enter Number or Email',
-                      border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(30),
-                      ),
-                    ),
-                  ),
-                  SizedBox(height: 20),
-                  
-                  TextField(
-                    obscureText: true,
-                    decoration: InputDecoration(
-                      filled: true,
-                      fillColor: Colors.white.withOpacity(0.9),
-                      hintText: 'Enter Password',
-                      border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(30),
-                      ),
-                    ),
-                  ),
-                  SizedBox(height: 20),
-                  
-                  // Log in button
+                 
                   ElevatedButton(
                     onPressed: () {
                       // Implement login functionality here
@@ -97,20 +71,30 @@ class LoginPage extends StatelessWidget {
                   
                   SizedBox(height: 20),
                   
-                  // Forgot Password link
-                  TextButton(
+                  // Log in button
+                  ElevatedButton(
                     onPressed: () {
-                      // Implement forgot password functionality here
+                      // Implement login functionality here
                     },
+                    style: ElevatedButton.styleFrom(
+                      padding: EdgeInsets.symmetric(horizontal: 80, vertical: 15), backgroundColor: Colors.white.withOpacity(0.9),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(30),
+                      ), // button color
+                    ),
                     child: Text(
-                      "Forgot password?",
+                      "Sign Up",
                       style: TextStyle(
-                        color: Colors.red,
-                        fontSize: 16,
-                        decoration: TextDecoration.underline,
+                        color: Colors.black,
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold,
                       ),
                     ),
                   ),
+                  
+                  SizedBox(height: 20),
+                  
+                  
                 ],
               ),
             ),
