@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'login.dart';
+
 class CreatePassword extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -63,6 +65,12 @@ class CreatePassword extends StatelessWidget {
                   ElevatedButton(
                     onPressed: () {
                       // Implement verify functionality here
+
+                      Navigator.of(context).push(
+                          MaterialPageRoute(
+                           builder: (context) => const LoginPage(),
+                         ),
+                        );
                     },
                     style: ElevatedButton.styleFrom(
                       padding: EdgeInsets.symmetric(horizontal: 80, vertical: 15), backgroundColor: Colors.white.withOpacity(0.9),

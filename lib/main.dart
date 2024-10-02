@@ -4,6 +4,10 @@ import 'package:flutter/material.dart';
 //import 'screens/forget_password.dart';
 //import 'screens/create_password.dart';
 //import 'screens/login_sign_up.dart';
+//import 'screens/botom_navigator_bar.dart';
+//import 'screens/home_screen.dart';
+//import 'screens/favourite_page.dart';
+//import 'screens/profile_page.dart';
 //import 'screens/signup.dart';
 import 'screens/splash_screen.dart';
 
@@ -25,6 +29,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
+      //home: SplashScreen(),
       home: SplashScreen(),
     );
   }

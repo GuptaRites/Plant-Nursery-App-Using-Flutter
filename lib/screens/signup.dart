@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'login.dart';
+
 class SignUpScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -178,6 +180,11 @@ class SignUpScreen extends StatelessWidget {
                     ElevatedButton(
                       onPressed: () {
                         // Implement next step functionality here
+                        Navigator.of(context).push(
+                          MaterialPageRoute(
+                           builder: (context) => LoginPage(),
+                         ),
+                        );
                       },
                       style: ElevatedButton.styleFrom(
                         padding: EdgeInsets.symmetric(horizontal: 80, vertical: 15), backgroundColor: Colors.white.withOpacity(0.9),

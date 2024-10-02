@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 
+import 'botom_navigator_bar.dart';
+import 'forget_password.dart';
+//import 'home_screen.dart';
+
 class LoginPage extends StatelessWidget {
   const LoginPage({super.key});
 
@@ -53,6 +57,7 @@ class LoginPage extends StatelessWidget {
                     decoration: InputDecoration(
                       filled: true,
                       fillColor: Colors.white.withOpacity(0.9),
+                      label: const Text("Enter your Email"),
                       hintText: 'Enter Number or Email',
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(30),
@@ -66,6 +71,7 @@ class LoginPage extends StatelessWidget {
                     decoration: InputDecoration(
                       filled: true,
                       fillColor: Colors.white.withOpacity(0.9),
+                      label: const Text("Enter Password"),
                       hintText: 'Enter Password',
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(30),
@@ -78,6 +84,11 @@ class LoginPage extends StatelessWidget {
                   ElevatedButton(
                     onPressed: () {
                       // Implement login functionality here
+                      Navigator.of(context).push(
+                          MaterialPageRoute(
+                           builder: (context) => NavigatorPage(),
+                         ),
+                        );
                     },
                     style: ElevatedButton.styleFrom(
                       padding: EdgeInsets.symmetric(horizontal: 80, vertical: 15), backgroundColor: Colors.white.withOpacity(0.9),
@@ -101,6 +112,11 @@ class LoginPage extends StatelessWidget {
                   TextButton(
                     onPressed: () {
                       // Implement forgot password functionality here
+                      Navigator.of(context).push(
+                          MaterialPageRoute(
+                           builder: (context) => ForgotPasswordScreen(),
+                         ),
+                        );
                     },
                     child: Text(
                       "Forgot password?",

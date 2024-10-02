@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'create_password.dart';
+
 class ForgotPasswordScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -63,6 +65,11 @@ class ForgotPasswordScreen extends StatelessWidget {
                   ElevatedButton(
                     onPressed: () {
                       // Implement verify functionality here
+                      Navigator.of(context).push(
+                          MaterialPageRoute(
+                           builder: (context) => CreatePassword(),
+                         ),
+                        );
                     },
                     style: ElevatedButton.styleFrom(
                       padding: EdgeInsets.symmetric(horizontal: 80, vertical: 15), backgroundColor: Colors.white.withOpacity(0.9),

@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+
+import 'login.dart';
+import 'signup.dart';
 
 class LoginSignUp extends StatelessWidget {
   const LoginSignUp({super.key});
@@ -50,8 +54,14 @@ class LoginSignUp extends StatelessWidget {
                   
                  
                   ElevatedButton(
-                    onPressed: () {
+                    onPressed: ()  {
                       // Implement login functionality here
+                      
+                          Navigator.of(context).push(
+                          MaterialPageRoute(
+                           builder: (context) => LoginPage(),
+                         ),
+                        );
                     },
                     style: ElevatedButton.styleFrom(
                       padding: EdgeInsets.symmetric(horizontal: 80, vertical: 15), backgroundColor: Colors.white.withOpacity(0.9),
@@ -74,7 +84,13 @@ class LoginSignUp extends StatelessWidget {
                   // Log in button
                   ElevatedButton(
                     onPressed: () {
+
                       // Implement login functionality here
+                      Navigator.of(context).push(
+                          MaterialPageRoute(
+                           builder: (context) => SignUpScreen(),
+                         ),
+                        );
                     },
                     style: ElevatedButton.styleFrom(
                       padding: EdgeInsets.symmetric(horizontal: 80, vertical: 15), backgroundColor: Colors.white.withOpacity(0.9),
