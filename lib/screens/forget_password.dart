@@ -11,7 +11,7 @@ class ForgotPasswordScreen extends StatelessWidget {
         children: [
           // Background image
           Image.asset(
-            'assets/nature_background.jpg', // Add your image in the assets folder and update this path
+            'images/background.jpg', // Add your image in the assets folder and update this path
             fit: BoxFit.cover,
           ),
           // Transparent overlay
@@ -41,6 +41,7 @@ class ForgotPasswordScreen extends StatelessWidget {
                     decoration: InputDecoration(
                       filled: true,
                       fillColor: Colors.white.withOpacity(0.9),
+                      label: const Text("User Id"),
                       hintText: 'Enter User id',
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(30),
@@ -53,6 +54,7 @@ class ForgotPasswordScreen extends StatelessWidget {
                     decoration: InputDecoration(
                       filled: true,
                       fillColor: Colors.white.withOpacity(0.9),
+                      label: const Text("Enter your Email"),
                       hintText: 'Enter Email',
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(30),

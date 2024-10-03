@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:shared_preferences/shared_preferences.dart';
+//import 'package:shared_preferences/shared_preferences.dart';
 
 import 'login.dart';
 import 'signup.dart';
@@ -15,7 +15,7 @@ class LoginSignUp extends StatelessWidget {
         children: [
           // Background image
           Image.asset(
-            'assets/nature_background.jpeg', // Add your image in the assets folder and update this path
+            'images/background.jpg', // Add your image in the assets folder and update this path
             fit: BoxFit.cover,
           ),
           // Transparent overlay for the content

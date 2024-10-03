@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'cart_page.dart';
+
 class FavoritePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -12,6 +14,11 @@ class FavoritePage extends StatelessWidget {
             icon: Icon(Icons.shopping_cart, color: Colors.green),
             onPressed: () {
               // Handle cart action
+              Navigator.of(context).push(
+                          MaterialPageRoute(
+                           builder: (context) => ShoppingCart(),
+                         ),
+                        );
             },
           ),
         ],

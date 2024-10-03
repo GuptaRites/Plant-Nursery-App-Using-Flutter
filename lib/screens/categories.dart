@@ -1,6 +1,8 @@
 
 //import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+
+import 'cart_page.dart';
 //import 'package:plant_nusery_app/screens/categories.dart';
 
 class CategoriesPage extends StatelessWidget {
@@ -13,7 +15,13 @@ class CategoriesPage extends StatelessWidget {
         actions: [
           IconButton(
             icon: Icon(Icons.shopping_cart, color: Colors.green),
-            onPressed: () {},
+            onPressed: () {
+              Navigator.of(context).push(
+                          MaterialPageRoute(
+                           builder: (context) => ShoppingCart(),
+                         ),
+                        );
+            },
           ),
         ],
         backgroundColor: Colors.green[50],
@@ -42,13 +50,14 @@ class CategoriesPage extends StatelessWidget {
                 crossAxisSpacing: 10,
                 mainAxisSpacing: 10,
                 children: [
-                  plantItem('Rose', 'assets/rose.jpg'),
-                  plantItem('Lily', 'assets/lily.jpg'),
-                  plantItem('Money Plant', 'assets/moneyplant.jpg'),
-                  plantItem('Sandalwood', 'assets/sandalwood.jpg'),
-                  plantItem('Dalchini', 'assets/dalchini.jpg'),
-                  plantItem('Cucumber', 'assets/cucumber.jpg'),
+                  plantItem('Seeds', 'images/cucumber.jpg'),
+                  plantItem('Flowers', 'images/lily.jpg'),
+                  plantItem('Trees', 'images/tree.jpeg'),
+                  plantItem('Firtilizers', 'images/fertilizers.jpeg'),
+                  plantItem('Plants', 'images/money_plant.jpg'),
+                  plantItem('Combos', 'images/combo.jpeg'),
                 ],
+                
               ),
             ),
           ),

@@ -11,7 +11,7 @@ class SignUpScreen extends StatelessWidget {
         children: [
           // Background image
           Image.asset(
-            'assets/nature_background.jpg', // Add your image in the assets folder and update this path
+            'images/background.jpg', // Add your image in the assets folder and update this path
             fit: BoxFit.cover,
           ),
           // Transparent overlay
@@ -42,6 +42,7 @@ class SignUpScreen extends StatelessWidget {
                       decoration: InputDecoration(
                         filled: true,
                         fillColor: Colors.white.withOpacity(0.9),
+                        label: const Text("Enter your First name"),
                         hintText: 'First name',
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(30),
@@ -54,6 +55,7 @@ class SignUpScreen extends StatelessWidget {
                       decoration: InputDecoration(
                         filled: true,
                         fillColor: Colors.white.withOpacity(0.9),
+                        label: const Text("Enter your Last name"),
                         hintText: 'Last name',
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(30),
@@ -66,6 +68,7 @@ class SignUpScreen extends StatelessWidget {
                       decoration: InputDecoration(
                         filled: true,
                         fillColor: Colors.white.withOpacity(0.9),
+                        label: const Text("Enter your Email"),
                         hintText: 'Email',
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(30),
@@ -79,6 +82,7 @@ class SignUpScreen extends StatelessWidget {
                       decoration: InputDecoration(
                         filled: true,
                         fillColor: Colors.white.withOpacity(0.9),
+                        label: const Text("Enter Mobile Number"),
                         hintText: 'Mobile number',
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(30),
@@ -92,7 +96,8 @@ class SignUpScreen extends StatelessWidget {
                       decoration: InputDecoration(
                         filled: true,
                         fillColor: Colors.white.withOpacity(0.9),
-                        hintText: 'User Id',
+                        label: const Text("Create User Id"),
+                        hintText: 'Create User Id',
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(30),
                         ),
@@ -106,7 +111,8 @@ class SignUpScreen extends StatelessWidget {
                       decoration: InputDecoration(
                         filled: true,
                         fillColor: Colors.white.withOpacity(0.9),
-                        hintText: 'Password',
+                        label: const Text("Create Password"),
+                        hintText: 'Create Password',
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(30),
                         ),
@@ -120,6 +126,7 @@ class SignUpScreen extends StatelessWidget {
                       decoration: InputDecoration(
                         filled: true,
                         fillColor: Colors.white.withOpacity(0.9),
+                        label: const Text("Conform Password"),
                         hintText: 'Conform Password',
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(30),
@@ -193,7 +200,7 @@ class SignUpScreen extends StatelessWidget {
                         ), // button color
                       ),
                       child: Text(
-                        "Next",
+                        "Submit",
                         style: TextStyle(
                           color: Colors.black,
                           fontSize: 18,

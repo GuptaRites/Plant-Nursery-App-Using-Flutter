@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
 
+import 'edit_profile.dart';
+import 'login.dart';
+
 class ProfilePage extends StatelessWidget {
+  const ProfilePage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -11,13 +16,18 @@ class ProfilePage extends StatelessWidget {
         //     // Handle back navigation
         //   },
         // ),
-        title: Text('Profile', style: TextStyle(color: Colors.green)),
+        title: const Text('Profile', style: TextStyle(color: Colors.green)),
         centerTitle: true,
         actions: [
           IconButton(
-            icon: Icon(Icons.edit, color: Colors.green),
+            icon: const Icon(Icons.edit, color: Colors.green),
             onPressed: () {
               // Handle profile edit
+              Navigator.of(context).push(
+                          MaterialPageRoute(
+                           builder: (context) => EditProfileScreen(),
+                         ),
+                        );
             },
           ),
         ],
@@ -30,11 +40,11 @@ class ProfilePage extends StatelessWidget {
             CircleAvatar(
               radius: 40,
               backgroundColor: Colors.grey[200],
-              child: Icon(Icons.person_add, size: 40, color: Colors.grey),
+              child: const Icon(Icons.person_add, size: 40, color: Colors.grey),
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             profileItem(Icons.person, 'Name', 'abc'),
-            SizedBox(height: 15),
+            const SizedBox(height: 15),
             profileItem(Icons.email, 'E-Mail', 'abc@gmail.com'),
             SizedBox(height: 15),
             profileItem(Icons.phone, 'Phone no.', '+91 ******6577'),
@@ -44,6 +54,11 @@ class ProfilePage extends StatelessWidget {
             ElevatedButton(
               onPressed: () {
                 // Handle logout
+                Navigator.of(context).push(
+                          MaterialPageRoute(
+                           builder: (context) => LoginPage(),
+                         ),
+                        );
               },
               style: ElevatedButton.styleFrom(
                 foregroundColor: Colors.black, backgroundColor: Colors.green[100],    // text color

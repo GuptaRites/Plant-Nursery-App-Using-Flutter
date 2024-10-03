@@ -1,6 +1,8 @@
 
 //import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+
+import 'cart_page.dart';
 //import 'package:plant_nusery_app/screens/categories.dart';
 
 class PlantHomePage extends StatefulWidget {
@@ -19,7 +21,13 @@ class _PlantHomePageState extends State<PlantHomePage> {
         actions: [
           IconButton(
             icon: Icon(Icons.shopping_cart, color: Colors.green),
-            onPressed: () {},
+            onPressed: () {
+              Navigator.of(context).push(
+                          MaterialPageRoute(
+                           builder: (context) => ShoppingCart(),
+                         ),
+                        );
+            },
           ),
         ],
         backgroundColor: Colors.green[50],
@@ -48,12 +56,12 @@ class _PlantHomePageState extends State<PlantHomePage> {
                 crossAxisSpacing: 10,
                 mainAxisSpacing: 10,
                 children: [
-                  plantItem('Rose', 'assets/rose.jpg'),
-                  plantItem('Lily', 'assets/lily.jpg'),
-                  plantItem('Money Plant', 'assets/moneyplant.jpg'),
-                  plantItem('Sandalwood', 'assets/sandalwood.jpg'),
-                  plantItem('Dalchini', 'assets/dalchini.jpg'),
-                  plantItem('Cucumber', 'assets/cucumber.jpg'),
+                  plantItem('Rose', 'images/rose.jpg'),
+                  plantItem('Lily', 'images/lily.jpg'),
+                  plantItem('Money Plant', 'images/money_plant.jpg'),
+                  plantItem('Sandalwood', 'images/sandal.jpeg'),
+                  plantItem('Dalchini', 'images/dalchini.jpeg'),
+                  plantItem('Cucumber', 'images/cucumber.jpg'),
                 ],
               ),
             ),
