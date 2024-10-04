@@ -44,8 +44,8 @@ class FavoritePage extends StatelessWidget {
             child: ListView(
               padding: EdgeInsets.all(8),
               children: [
-                favoriteItem('Rose', 'Their stems are usually prickly and their glossy, green leaves have toothed edges.', 'assets/rose.jpg', '\$200.00'),
-                favoriteItem('Rose', 'Their stems are usually prickly and their glossy, green leaves have toothed edges.', 'assets/rose.jpg', '\$200.00'),
+                favoriteItem('Rose', 'Their stems are usually prickly and their glossy, green leaves have toothed edges.', 'images/rose.jpg'),
+                favoriteItem('Lily', 'Their stems are usually prickly and their glossy, green leaves have toothed edges.', 'images/lily.jpg'),
               ],
             ),
           ),
@@ -54,7 +54,7 @@ class FavoritePage extends StatelessWidget {
     );
   }
 
-  Widget favoriteItem(String name, String description, String imagePath, String price) {
+  Widget favoriteItem(String name, String description, String imagePath) {
     return Card(
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(10),
@@ -67,6 +67,7 @@ class FavoritePage extends StatelessWidget {
         ),
         title: Text(name, style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
         subtitle: Text(description),
+        
         trailing: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
@@ -76,13 +77,13 @@ class FavoritePage extends StatelessWidget {
                 // Handle remove action
               },
             ),
-            Text(price, style: TextStyle(fontSize: 16)),
-            GestureDetector(
-              onTap: () {
-                // Handle buy action
-              },
-              child: Text('Buy', style: TextStyle(color: Colors.green, fontWeight: FontWeight.bold)),
-            ),
+            //Text(price, style: TextStyle(fontSize: 16)),
+            // GestureDetector(
+            //   onTap: () {
+            //     // Handle buy action
+            //   },
+            //   child: Text('Buy', style: TextStyle(color: Colors.green, fontWeight: FontWeight.bold)),
+            // ),
           ],
         ),
       ),
