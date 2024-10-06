@@ -1,10 +1,11 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:plant_nusery_app/admin_user.dart';
 //import 'package:get/get.dart';
 
 //import 'login.dart';
-import 'login_sign_up.dart';
+//import 'login_sign_up.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -21,7 +22,7 @@ class _SplashScreenState extends State<SplashScreen> {
     Timer(const Duration(seconds:2), (){
       Navigator.pushReplacement(context,
       MaterialPageRoute(
-        builder: (context) => const LoginSignUp(),
+        builder: (context) => const AdminUserPage(),
         ));
     });
   }

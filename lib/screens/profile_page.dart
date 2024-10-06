@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:plant_nusery_app/admin_user.dart';
 
 import 'edit_profile.dart';
-import 'login.dart';
+//import 'login.dart';
 
 class ProfilePage extends StatelessWidget {
   const ProfilePage({super.key});
@@ -56,7 +57,7 @@ class ProfilePage extends StatelessWidget {
                 // Handle logout
                 Navigator.of(context).push(
                           MaterialPageRoute(
-                           builder: (context) => const LoginPage(),
+                           builder: (context) => const AdminUserPage(),
                          ),
                         );
               },
