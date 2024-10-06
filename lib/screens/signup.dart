@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'login.dart';
 
 class SignUpScreen extends StatelessWidget {
+  const SignUpScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -27,7 +29,7 @@ class SignUpScreen extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     // "Sign up" Text
-                    Text(
+                    const Text(
                       "Sign up",
                       style: TextStyle(
                         color: Colors.white,
@@ -35,7 +37,7 @@ class SignUpScreen extends StatelessWidget {
                         fontWeight: FontWeight.bold,
                       ),
                     ),
-                    SizedBox(height: 20),
+                    const SizedBox(height: 20),
                     
                     // Input fields for First name, Last name, Email, Mobile number
                     TextField(
@@ -49,7 +51,7 @@ class SignUpScreen extends StatelessWidget {
                         ),
                       ),
                     ),
-                    SizedBox(height: 15),
+                    const SizedBox(height: 15),
                     
                     TextField(
                       decoration: InputDecoration(
@@ -62,7 +64,7 @@ class SignUpScreen extends StatelessWidget {
                         ),
                       ),
                     ),
-                    SizedBox(height: 15),
+                    const SizedBox(height: 15),
                     
                     TextField(
                       decoration: InputDecoration(
@@ -75,7 +77,7 @@ class SignUpScreen extends StatelessWidget {
                         ),
                       ),
                     ),
-                    SizedBox(height: 15),
+                    const SizedBox(height: 15),
                     
                     TextField(
                       keyboardType: TextInputType.phone,
@@ -89,7 +91,7 @@ class SignUpScreen extends StatelessWidget {
                         ),
                       ),
                     ),
-                    SizedBox(height: 20),
+                    const SizedBox(height: 20),
                 
                     TextField(
                       keyboardType: TextInputType.phone,
@@ -103,7 +105,7 @@ class SignUpScreen extends StatelessWidget {
                         ),
                       ),
                     ),
-                    SizedBox(height: 20),
+                    const SizedBox(height: 20),
                 
                 
                     TextField(
@@ -118,7 +120,7 @@ class SignUpScreen extends StatelessWidget {
                         ),
                       ),
                     ),
-                    SizedBox(height: 20),
+                    const SizedBox(height: 20),
                 
                 
                     TextField(
@@ -133,16 +135,16 @@ class SignUpScreen extends StatelessWidget {
                         ),
                       ),
                     ),
-                    SizedBox(height: 20),
+                    const SizedBox(height: 20),
                 
                     // Gender selection radio buttons
                     Row(
                       children: [
-                        Text(
+                        const Text(
                           'Gender:',
                           style: TextStyle(color: Colors.white, fontSize: 16),
                         ),
-                        SizedBox(width: 10),
+                        const SizedBox(width: 10),
                         Expanded(
                           child: Row(
                             children: [
@@ -152,7 +154,7 @@ class SignUpScreen extends StatelessWidget {
                                 onChanged: (value) {},
                                 activeColor: Colors.white,
                               ),
-                              Text(
+                              const Text(
                                 'Male',
                                 style: TextStyle(color: Colors.white),
                               ),
@@ -162,7 +164,7 @@ class SignUpScreen extends StatelessWidget {
                                 onChanged: (value) {},
                                 activeColor: Colors.white,
                               ),
-                              Text(
+                              const Text(
                                 'Female',
                                 style: TextStyle(color: Colors.white),
                               ),
@@ -172,7 +174,7 @@ class SignUpScreen extends StatelessWidget {
                                 onChanged: (value) {},
                                 activeColor: Colors.white,
                               ),
-                              Text(
+                              const Text(
                                 'Other',
                                 style: TextStyle(color: Colors.white),
                               ),
@@ -181,7 +183,7 @@ class SignUpScreen extends StatelessWidget {
                         ),
                       ],
                     ),
-                    SizedBox(height: 20),
+                    const SizedBox(height: 20),
                     
                     // "Next" button
                     ElevatedButton(
@@ -189,17 +191,17 @@ class SignUpScreen extends StatelessWidget {
                         // Implement next step functionality here
                         Navigator.of(context).push(
                           MaterialPageRoute(
-                           builder: (context) => LoginPage(),
+                           builder: (context) => const LoginPage(),
                          ),
                         );
                       },
                       style: ElevatedButton.styleFrom(
-                        padding: EdgeInsets.symmetric(horizontal: 80, vertical: 15), backgroundColor: Colors.white.withOpacity(0.9),
+                        padding: const EdgeInsets.symmetric(horizontal: 80, vertical: 15), backgroundColor: Colors.white.withOpacity(0.9),
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(30),
                         ), // button color
                       ),
-                      child: Text(
+                      child: const Text(
                         "Submit",
                         style: TextStyle(
                           color: Colors.black,

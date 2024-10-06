@@ -18,10 +18,10 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     // TODO: implement initState
     super.initState();
-    Timer(Duration(seconds:2), (){
+    Timer(const Duration(seconds:2), (){
       Navigator.pushReplacement(context,
       MaterialPageRoute(
-        builder: (context) => LoginSignUp(),
+        builder: (context) => const LoginSignUp(),
         ));
     });
   }
@@ -29,12 +29,28 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
+      body:  Container(
         color: Colors.green,
-        child: Center(
-          child: Text('Welcome',
-          style: TextStyle(fontSize: 30.0, fontWeight: FontWeight.bold),
-        ),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+        
+          children: [
+            CircleAvatar(
+                radius: 50,
+                backgroundColor: Colors.white.withOpacity(0.9),
+                child: const Icon(
+                  Icons.eco,
+                  size: 50,
+                  color: Colors.green,
+                ),
+              ),
+            const Center(
+              child: Text('Welcome',
+              style: TextStyle(fontSize: 30.0, fontWeight: FontWeight.bold),
+               ), 
+            ),  
+          ],
         ),
       ),
     );

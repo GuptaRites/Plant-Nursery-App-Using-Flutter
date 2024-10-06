@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'login.dart';
 
 class CreatePassword extends StatelessWidget {
+  const CreatePassword({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -26,7 +28,7 @@ class CreatePassword extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   // "Forget Password" Text
-                  Text(
+                  const Text(
                     "Create a new password",
                     style: TextStyle(
                       color: Colors.white,
@@ -34,7 +36,7 @@ class CreatePassword extends StatelessWidget {
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-                  SizedBox(height: 20),
+                  const SizedBox(height: 20),
                   
                   // Input fields for User ID and Email
                   TextField(
@@ -48,7 +50,7 @@ class CreatePassword extends StatelessWidget {
                       ),
                     ),
                   ),
-                  SizedBox(height: 20),
+                  const SizedBox(height: 20),
                   
                   TextField(
                     decoration: InputDecoration(
@@ -61,7 +63,7 @@ class CreatePassword extends StatelessWidget {
                       ),
                     ),
                   ),
-                  SizedBox(height: 20),
+                  const SizedBox(height: 20),
                   
                   // Verify button
                   ElevatedButton(
@@ -75,12 +77,12 @@ class CreatePassword extends StatelessWidget {
                         );
                     },
                     style: ElevatedButton.styleFrom(
-                      padding: EdgeInsets.symmetric(horizontal: 80, vertical: 15), backgroundColor: Colors.white.withOpacity(0.9),
+                      padding: const EdgeInsets.symmetric(horizontal: 80, vertical: 15), backgroundColor: Colors.white.withOpacity(0.9),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(30),
                       ), // button color
                     ),
-                    child: Text(
+                    child: const Text(
                       "Create",
                       style: TextStyle(
                         color: Colors.black,

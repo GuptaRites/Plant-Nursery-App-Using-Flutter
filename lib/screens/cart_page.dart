@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class ShoppingCart extends StatefulWidget {
+  const ShoppingCart({super.key});
+
   @override
   _ShoppingCartState createState() => _ShoppingCartState();
 }
@@ -32,7 +34,7 @@ class _ShoppingCartState extends State<ShoppingCart> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('My Cart'),
+        title: const Text('My Cart'),
         backgroundColor: Colors.green.shade400,
       ),
       body: Column(
@@ -42,7 +44,7 @@ class _ShoppingCartState extends State<ShoppingCart> {
               itemCount: items.length,
               itemBuilder: (context, index) {
                 return Card(
-                  margin: EdgeInsets.all(10),
+                  margin: const EdgeInsets.all(10),
                   child: ListTile(
                     leading: Image.asset(items[index].image),
                     title: Text(items[index].name),
@@ -51,12 +53,12 @@ class _ShoppingCartState extends State<ShoppingCart> {
                       mainAxisSize: MainAxisSize.min,
                       children: [
                         IconButton(
-                          icon: Icon(Icons.remove),
+                          icon: const Icon(Icons.remove),
                           onPressed: () => decrementQuantity(index),
                         ),
                         Text('${items[index].quantity}'),
                         IconButton(
-                          icon: Icon(Icons.add),
+                          icon: const Icon(Icons.add),
                           onPressed: () => incrementQuantity(index),
                         ),
                       ],
@@ -72,19 +74,19 @@ class _ShoppingCartState extends State<ShoppingCart> {
               children: [
                 Text(
                   'Total: \$${totalPrice.toStringAsFixed(2)}',
-                  style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                  style: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
                 ),
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
                 ElevatedButton(
                   onPressed: () {
                     // Handle checkout logic here
                   },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.redAccent, // Checkout button color
-                    padding: EdgeInsets.symmetric(horizontal: 50, vertical: 15),
-                    textStyle: TextStyle(fontSize: 18),
+                    padding: const EdgeInsets.symmetric(horizontal: 50, vertical: 15),
+                    textStyle: const TextStyle(fontSize: 18),
                   ),
-                  child: Text('Check Out'),
+                  child: const Text('Check Out'),
                 ),
               ],
             ),

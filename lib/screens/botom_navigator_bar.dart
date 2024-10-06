@@ -8,6 +8,8 @@ import 'favourite_page.dart';
 import 'home_screen.dart';
 
 class NavigatorPage extends StatefulWidget {
+  const NavigatorPage({super.key});
+
   @override
   State<NavigatorPage> createState() => _NavigatorPageState();
 }
@@ -18,7 +20,7 @@ class _NavigatorPageState extends State<NavigatorPage> {
     PlantHomePage(),
     FavoritePage(),
     CategoriesPage(),
-    ProfilePage(),
+    const ProfilePage(),
   ];
   @override
   Widget build(BuildContext context) {
@@ -44,7 +46,7 @@ class _NavigatorPageState extends State<NavigatorPage> {
          
         },
         currentIndex: myIndex,
-        items: [
+        items: const [
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
             label: 'Home',

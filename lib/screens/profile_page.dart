@@ -46,28 +46,28 @@ class ProfilePage extends StatelessWidget {
             profileItem(Icons.person, 'Name', 'abc'),
             const SizedBox(height: 15),
             profileItem(Icons.email, 'E-Mail', 'abc@gmail.com'),
-            SizedBox(height: 15),
+            const SizedBox(height: 15),
             profileItem(Icons.phone, 'Phone no.', '+91 ******6577'),
-            SizedBox(height: 15),
+            const SizedBox(height: 15),
             profileItem(Icons.person_outline, 'Gender', 'Male', iconColor: Colors.purple),
-            Spacer(),
+            const Spacer(),
             ElevatedButton(
               onPressed: () {
                 // Handle logout
                 Navigator.of(context).push(
                           MaterialPageRoute(
-                           builder: (context) => LoginPage(),
+                           builder: (context) => const LoginPage(),
                          ),
                         );
               },
               style: ElevatedButton.styleFrom(
                 foregroundColor: Colors.black, backgroundColor: Colors.green[100],    // text color
-                minimumSize: Size(double.infinity, 50),
+                minimumSize: const Size(double.infinity, 50),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(10),
                 ),
               ),
-              child: Text('Logout', style: TextStyle(fontSize: 18)),
+              child: const Text('Logout', style: TextStyle(fontSize: 18)),
             ),
           ],
         ),
@@ -79,13 +79,13 @@ class ProfilePage extends StatelessWidget {
     return Row(
       children: [
         Icon(icon, color: iconColor ?? Colors.black),
-        SizedBox(width: 15),
+        const SizedBox(width: 15),
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(title, style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
-            SizedBox(height: 5),
-            Text(subtitle, style: TextStyle(fontSize: 14, color: Colors.grey)),
+            Text(title, style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
+            const SizedBox(height: 5),
+            Text(subtitle, style: const TextStyle(fontSize: 14, color: Colors.grey)),
           ],
         ),
       ],

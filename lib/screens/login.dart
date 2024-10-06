@@ -33,52 +33,55 @@ class LoginPage extends StatelessWidget {
                   CircleAvatar(
                     radius: 50,
                     backgroundColor: Colors.white.withOpacity(0.9),
-                    child: Icon(
+                    child: const Icon(
                       Icons.eco,
                       size: 50,
                       color: Colors.green,
                     ),
                   ),
-                  SizedBox(height: 20),
+                  const SizedBox(height: 20),
                   
                   // "Log in" Text
-                  Text(
+                  const Text(
                     "Log in",
                     style: TextStyle(
-                      color: Colors.white,
+                      color: Color.fromARGB(255, 255, 255, 255),
                       fontSize: 30,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-                  SizedBox(height: 30),
+                  const SizedBox(height: 30),
                   
                   // Input fields for Email/Phone and Password
                   TextField(
                     decoration: InputDecoration(
                       filled: true,
                       fillColor: Colors.white.withOpacity(0.9),
-                      label: const Text("Enter your Email"),
+                      label: const Text("Enter Number or Email"),
                       hintText: 'Enter Number or Email',
+                      hintStyle: const TextStyle(color: Colors.blue),
+                      labelStyle: TextStyle(backgroundColor: Colors.white.withOpacity(0.9), color:Colors.blue ),
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(30),
                       ),
                     ),
                   ),
-                  SizedBox(height: 20),
+                  const SizedBox(height: 20),
                   
                   TextField(
                     obscureText: true,
                     decoration: InputDecoration(
                       filled: true,
                       fillColor: Colors.white.withOpacity(0.9),
-                      label: const Text("Enter Password"),
+                      label:  const Text("Enter Password"),
+                      labelStyle: const TextStyle(backgroundColor: Colors.white),
                       hintText: 'Enter Password',
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(30),
                       ),
                     ),
                   ),
-                  SizedBox(height: 20),
+                  const SizedBox(height: 20),
                   
                   // Log in button
                   ElevatedButton(
@@ -91,12 +94,12 @@ class LoginPage extends StatelessWidget {
                         );
                     },
                     style: ElevatedButton.styleFrom(
-                      padding: EdgeInsets.symmetric(horizontal: 80, vertical: 15), backgroundColor: Colors.white.withOpacity(0.9),
+                      padding: const EdgeInsets.symmetric(horizontal: 80, vertical: 15), backgroundColor: const Color.fromARGB(255, 5, 129, 65).withOpacity(0.9),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(30),
                       ), // button color
                     ),
-                    child: Text(
+                    child: const Text(
                       "Log in",
                       style: TextStyle(
                         color: Colors.black,
@@ -106,7 +109,7 @@ class LoginPage extends StatelessWidget {
                     ),
                   ),
                   
-                  SizedBox(height: 20),
+                  const SizedBox(height: 20),
                   
                   // Forgot Password link
                   TextButton(
@@ -118,7 +121,7 @@ class LoginPage extends StatelessWidget {
                          ),
                         );
                     },
-                    child: Text(
+                    child: const Text(
                       "Forgot password?",
                       style: TextStyle(
                         color: Colors.red,

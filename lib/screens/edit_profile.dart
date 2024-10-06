@@ -10,6 +10,8 @@ class EditProfileScreen extends StatelessWidget {
   final TextEditingController phoneController = TextEditingController();
   final TextEditingController genderController = TextEditingController();
 
+  EditProfileScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -17,7 +19,7 @@ class EditProfileScreen extends StatelessWidget {
         backgroundColor: Colors.green.shade400,
         title: Text('Edit Profile', style: TextStyle(color: Colors.green.shade800)),
         leading: IconButton(
-          icon: Icon(Icons.arrow_back),
+          icon: const Icon(Icons.arrow_back),
           onPressed: () {
             // Handle back action
           },
@@ -31,9 +33,9 @@ class EditProfileScreen extends StatelessWidget {
             CircleAvatar(
               radius: 50,
               backgroundColor: Colors.grey.shade300,
-              child: Icon(Icons.person, size: 50, color: Colors.grey),
+              child: const Icon(Icons.person, size: 50, color: Colors.grey),
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             // Input fields for user details
             CustomTextField(
               controller: nameController,
@@ -51,7 +53,7 @@ class EditProfileScreen extends StatelessWidget {
               controller: genderController,
               label: 'Gender',
             ),
-            SizedBox(height: 30),
+            const SizedBox(height: 30),
             ElevatedButton(
               onPressed: () {
                 // Save button logic goes here
@@ -63,9 +65,9 @@ class EditProfileScreen extends StatelessWidget {
               },
               style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.green.shade400, // Save button color
-                padding: EdgeInsets.symmetric(horizontal: 80, vertical: 15),
+                padding: const EdgeInsets.symmetric(horizontal: 80, vertical: 15),
               ),
-              child: Text(
+              child: const Text(
                 'Save',
                 style: TextStyle(fontSize: 18),
               ),
@@ -82,7 +84,7 @@ class CustomTextField extends StatelessWidget {
   final TextEditingController controller;
   final String label;
 
-  CustomTextField({required this.controller, required this.label});
+  const CustomTextField({super.key, required this.controller, required this.label});
 
   @override
   Widget build(BuildContext context) {
@@ -94,7 +96,7 @@ class CustomTextField extends StatelessWidget {
           labelText: label,
           border: OutlineInputBorder(
             borderRadius: BorderRadius.circular(15),
-            borderSide: BorderSide(color: Colors.grey),
+            borderSide: const BorderSide(color: Colors.grey),
           ),
           filled: true,
           fillColor: Colors.grey.shade200,

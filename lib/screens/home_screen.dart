@@ -6,6 +6,8 @@ import 'cart_page.dart';
 //import 'package:plant_nusery_app/screens/categories.dart';
 
 class PlantHomePage extends StatefulWidget {
+  const PlantHomePage({super.key});
+
   @override
   State<PlantHomePage> createState() => _PlantHomePageState();
 }
@@ -16,11 +18,11 @@ class _PlantHomePageState extends State<PlantHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Home', style: TextStyle(color: Colors.green)),
+        title: const Text('Home', style: TextStyle(color: Colors.green)),
         centerTitle: true,
         actions: [
           IconButton(
-            icon: Icon(Icons.shopping_cart, color: Colors.green),
+            icon: const Icon(Icons.shopping_cart, color: Colors.green),
             onPressed: () {
               Navigator.of(context).push(
                           MaterialPageRoute(
@@ -39,7 +41,7 @@ class _PlantHomePageState extends State<PlantHomePage> {
             child: TextField(
               decoration: InputDecoration(
                 hintText: 'Search',
-                prefixIcon: Icon(Icons.search),
+                prefixIcon: const Icon(Icons.search),
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(10.0),
                 ),
@@ -86,8 +88,8 @@ class _PlantHomePageState extends State<PlantHomePage> {
             ),
           ),
         ),
-        SizedBox(height: 5),
-        Text(name, style: TextStyle(fontSize: 16)),
+        const SizedBox(height: 5),
+        Text(name, style: const TextStyle(fontSize: 16)),
       ],
     );
   }
