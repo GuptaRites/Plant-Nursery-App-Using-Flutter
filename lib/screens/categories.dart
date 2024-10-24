@@ -20,7 +20,7 @@ class CategoriesPage extends StatelessWidget {
             onPressed: () {
               Navigator.of(context).push(
                           MaterialPageRoute(
-                           builder: (context) => ShoppingCart(),
+                           builder: (context) => const ShoppingCart(),
                          ),
                         );
             },

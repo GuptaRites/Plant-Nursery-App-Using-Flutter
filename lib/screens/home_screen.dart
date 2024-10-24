@@ -16,6 +16,33 @@ class _PlantHomePageState extends State<PlantHomePage> {
  
   @override
   Widget build(BuildContext context) {
+    var name = [
+      'Rose',
+      'Lily',
+      'Mony plant',
+      'Sandal Wood',
+      'Dalchini',
+      'cucumber',
+      
+    ]; 
+     var imgpath = [
+      'images/rose.jpg',
+      'images/lily.jpg',
+      'images/money_plant.jpg',
+      'images/sandal.jpeg',
+      'images/dalchini.jpeg',
+      'images/cucumber.jpg',
+      
+      
+    ]; 
+    // var imgmaterials = [
+    //   plantItem('Rose', 'images/rose.jpg'),
+    //               plantItem('Lily', 'images/lily.jpg'),
+    //               plantItem('Money Plant', 'images/money_plant.jpg'),
+    //               plantItem('Sandalwood', 'images/sandal.jpeg'),
+    //               plantItem('Dalchini', 'images/dalchini.jpeg'),
+    //               plantItem('Cucumber', 'images/cucumber.jpg'),
+    // ];
     return Scaffold(
       appBar: AppBar(
         title: const Text('Home', style: TextStyle(color: Colors.green)),
@@ -26,7 +53,7 @@ class _PlantHomePageState extends State<PlantHomePage> {
             onPressed: () {
               Navigator.of(context).push(
                           MaterialPageRoute(
-                           builder: (context) => ShoppingCart(),
+                           builder: (context) => const ShoppingCart(),
                          ),
                         );
             },
@@ -53,19 +80,14 @@ class _PlantHomePageState extends State<PlantHomePage> {
           Expanded(
             child: Padding(
               padding: const EdgeInsets.all(8.0),
-              child: GridView.count(
+              child:GridView.builder(gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 2,
-                crossAxisSpacing: 10,
-                mainAxisSpacing: 10,
-                children: [
-                  plantItem('Rose', 'images/rose.jpg'),
-                  plantItem('Lily', 'images/lily.jpg'),
-                  plantItem('Money Plant', 'images/money_plant.jpg'),
-                  plantItem('Sandalwood', 'images/sandal.jpeg'),
-                  plantItem('Dalchini', 'images/dalchini.jpeg'),
-                  plantItem('Cucumber', 'images/cucumber.jpg'),
-                ],
-              ),
+                mainAxisSpacing: 8,
+                crossAxisSpacing: 8,
+              ), 
+              itemBuilder: (context, index) => plantItem(name[index] ,imgpath[index] ),
+              itemCount: name.length,
+              )
             ),
           ),
         ],

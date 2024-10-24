@@ -89,7 +89,7 @@ class LoginPage extends StatelessWidget {
                       // Implement login functionality here
                       Navigator.of(context).push(
                           MaterialPageRoute(
-                           builder: (context) => NavigatorPage(),
+                           builder: (context) => const NavigatorPage(),
                          ),
                         );
                     },
@@ -117,7 +117,7 @@ class LoginPage extends StatelessWidget {
                       // Implement forgot password functionality here
                       Navigator.of(context).push(
                           MaterialPageRoute(
-                           builder: (context) => ForgotPasswordScreen(),
+                           builder: (context) => const ForgotPasswordScreen(),
                          ),
                         );
                     },

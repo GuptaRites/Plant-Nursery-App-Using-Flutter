@@ -19,7 +19,7 @@ class _NavigatorPageState extends State<NavigatorPage> {
   List screenList= [
     //PlantHomePage(),
     //FavoritePage(),
-    CategoriesPage(),
+    const CategoriesPage(),
     const ProfilePage(),
   ];
   @override

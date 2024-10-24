@@ -71,7 +71,7 @@ class ForgotPasswordScreen extends StatelessWidget {
                       // Implement verify functionality here
                       Navigator.of(context).push(
                           MaterialPageRoute(
-                           builder: (context) => CreatePassword(),
+                           builder: (context) => const CreatePassword(),
                          ),
                         );
                     },

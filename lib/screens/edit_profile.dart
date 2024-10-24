@@ -59,7 +59,7 @@ class EditProfileScreen extends StatelessWidget {
                 // Save button logic goes here
                 Navigator.of(context).push(
                           MaterialPageRoute(
-                           builder: (context) => NavigatorPage(),
+                           builder: (context) => const NavigatorPage(),
                          ),
                         );
               },

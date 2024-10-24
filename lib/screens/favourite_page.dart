@@ -18,7 +18,7 @@ class FavoritePage extends StatelessWidget {
               // Handle cart action
               Navigator.of(context).push(
                 MaterialPageRoute(
-                 builder: (context) => ShoppingCart(),
+                 builder: (context) => const ShoppingCart(),
                 ),
               );
             },
